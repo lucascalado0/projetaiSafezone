@@ -3,23 +3,32 @@
 
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4D5360" />
 
     <!--Font roboto-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
 
-    <!--main css-->
-    <link rel="stylesheet" href="assets/css/main.css">
-
     <!--Normalize CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Css-->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!--manifest-->
+    <link rel="manifest" href="manifest.json">
 
     <title>Formulário de Relato</title>
+
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
+    </style>
 </head>
 
 <body>
@@ -49,14 +58,14 @@
             <label for="image-upload">Upload de Imagem:</label>
             <input type="file" id="image-upload" name="image" accept="image/*" required>
 
-            <label for="setor">Setor:</label>
+            <label for="setor" style="margin-top: 10px;">Setor:</label>
             <textarea id="setor" name="setor" rows="1" required></textarea>
 
-            <label for="image-description">Descrição da Imagem:</label>
+            <label for="image-description" style="margin-top: 10px;">Descrição da Imagem:</label>
             <textarea id="image-description" name="description" rows="2" required></textarea>
 
-            <label for="risk-type">Tipo de Risco:</label>
-            <select id="risk-type" name="risk" required>
+            <label for="risk-type" style="margin-top: 10px;">Tipo de Risco:</label>
+            <select id="risk-type" name="risk" required >
                 <option value="" disabled selected>Selecione o tipo de risco</option>
                 <option value="Risco 1">Risco 1</option>
                 <option value="Risco 2">Risco 2</option>
@@ -64,7 +73,7 @@
                 <option value="Risco 4">Risco 4</option>
             </select>
 
-            <button class="button_form" type="submit" data-button>Relatar</button>
+            <button class="button_form" type="submit" data-button style="margin-top: 20px;">Relatar</button>
         </form>
     </div>
 

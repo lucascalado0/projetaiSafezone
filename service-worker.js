@@ -5,17 +5,18 @@ self.addEventListener('install', event =>{
         caches.open(cacheName)
             .then(cache => cache.addAll([
                 'index.html',
-                'formRelato.html',
+                'formularioRelato.html',
                 'ocorrencias.html',
                 
                 './assets/css/main.css',
                 './assets/js/map.js',
+                './assets/js/formulario.js',
 
 
                 './assets/image/icon_lista.png',
                 './assets/image/icon_pindrop.png',
                 './assets/image/iconpin.png',
-                './assets/image/icon_mapa'
+                './assets/image/icon_mapa.png'
             ]))
     );
 });

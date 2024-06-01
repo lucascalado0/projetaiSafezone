@@ -3,16 +3,146 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#4D5360" />
+
+    <!--Font roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+
+    <!--Normalize CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Css-->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!--manifest-->
+    <link rel="manifest" href="manifest.json">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-color: whitesmoke;
+        }
+    </style>
+
     <title>Ocorrências</title>
 </head>
 
 <body>
+    <header id="header">
+        <div>
+            <nav>
+                <ul class="icons">
+                    <div class="flex">
+                        <ul>
+                            <li><a href="index.html"><img src="./assets/image/icon_mapa.png"
+                                        alt="Icone de Localização"></a></li>
+                            <li><a href="ocorrencias.html"><img src="./assets/image/icon_lista.png"
+                                        alt="Icone de lista"></a></li>
+                        </ul>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+        <div class="ocorrencias">
+            <h4>Filtrar por Localização</h4>
+            <select name="setores" id="sectionSelect" class="filtro" onchange="navigateToSection()">
+                <option value="" disabled selected>Selecione o Setor</option>
+                <option value="setorA">Setor A</option>
+                <option value="setorB">Setor B</option>
+                <option value="setorC">Setor C</option>
+                <option value="setorD">Setor D</option>
+            </select>
+    </header>
+    </div>
+    <main style="font-size: small;">
+        <section class="setores">
+            <div id="setorA">
+                <h4 class="setorTitulo">Setor A</h4>
+            </div>
+            <div class="ocorrenciasSetores">
+                <div class="cano">Cano Danificado
+                    <ul>
+                        <li>Nível de Risco: Baixo</li>
+                        <li>Status: Solucionado</li>
+                    </ul>
+                </div>
+                <div class="piso">Piso Desnivelado
+                    <ul>
+                        <li>Nível de Risco: Médio</li>
+                        <li>Status: Solucionado</li>
+                    </ul>
+                </div>
 
+            </div>
+        </section>
+        <section class="setores">
+            <div id="setorB">
+                <h4 class="setorTitulo">Setor B</h4>
+            </div>
+            <div class="ocorrenciasSetores">
+                <div class="cano">Cano Danificado
+                    <ul>
+                        <li>Nível de Risco: Baixo</li>
+                        <li>Status: Solucionado</li>
+                    </ul>
+                </div>
+                <div class="piso">Piso Desnivelado
+                    <ul>
+                        <li>Nível de Risco: Médio</li>
+                        <li>Status: Solucionado</li>
+                    </ul>
+                </div>
+            </div>
 
+        </section>
+        <section class="setores">
+            <div id="setorC">
+                <h4 class="setorTitulo">Setor C</h4>
+            </div>
+            <div class="ocorrenciasSetores">
+                <div class="cano">Cano Danificado
+                    <ul>
+                        <li>Nível de Risco: Baixo</li>
+                        <li>Status: Solucionado</li>
+                    </ul>
+                </div>
+                <div class="piso">Piso Desnivelado
+                    <ul>
+                        <li>Nível de Risco: Médio</li>
+                        <li>Status: Solucionado</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+        <section class="setores">
+            <div id="setorD">
+                <h4 class="setorTitulo">Setor D</h4>
+            </div>
+            <div class="ocorrenciasSetores">
+                <div class="cano">Cano Danificado
+                    <ul>
+                        <li>Nível de Risco: Baixo</li>
+                        <li>Status: Solucionado</li>
+                    </ul>
+                </div>
+                <div class="piso">Piso Desnivelado
+                    <ul>
+                        <li>Nível de Risco: Médio</li>
+                        <li>Status: Solucionado</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+    </main>
 
 
 
@@ -39,6 +169,13 @@
             window.location.reload();
             refreshing = true;
         })
+    </script>
+    <script>
+        function navigateToSection() {
+            var select = document.getElementById("sectionSelect");
+            var section = select.value;
+            window.location.hash = section;
+        }
     </script>
 </body>
 

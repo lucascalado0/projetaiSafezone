@@ -1,3 +1,4 @@
+
 body {
     font-family: 'roboto';
 }
@@ -46,7 +47,7 @@ body {
 #header nav ul li a {
 	display: flex;
 	position: relative;
-	height: 3em;
+	height: 2.5em;
 	line-height: 3em;
 	padding: 10px;
 	background-color: orange;
@@ -95,7 +96,7 @@ label {
 input[type="file"],
 textarea,
 select {
-	width: 100%;
+	width: 95%;
 	padding: 8px;
 	border: 1.5px solid #ed9a45;
 	border-radius: 10px;
@@ -107,7 +108,7 @@ select {
 	flex-direction: column;
 	background-color: #ed9a45;
 	color: #ffffff;
-	width: 100%;
+	width: 95%;
 	padding: .6em;
 	border: none;
 	border-radius: 10px;
@@ -120,6 +121,19 @@ select {
 
 .button1 {
     background-color: #ed9a45;
+    color: white;
+	border-radius: 15px;
+	border: 0;
+	display: inline-block;
+	letter-spacing: 0.1em;
+	line-height: 3.45em;
+	padding: 0 1em 0 1em;
+	text-align: center;
+	width: 100%;
+}
+
+.button2 {
+	background-color: #ed9a45;
     color: orange;
 	border-radius: 15px;
 	border: 2px solid #ed9a45;
@@ -130,18 +144,6 @@ select {
 	text-align: center;
     width: 100%;
     margin-bottom: 1px;
-}
-
-.button2 {
-	background-color: #ed9a45;
-    color: white;
-	border-radius: 15px;
-	border: 0;
-	display: inline-block;
-	letter-spacing: 0.1em;
-	line-height: 3.45em;
-	padding: 0 1em 0 1em;
-	text-align: center;
 }
 
 .card_options {
@@ -169,40 +171,97 @@ select {
 
 
 
+/* Ocorrencias */
+
+.ocorrencias {
+	margin-top: 120px;
+	text-align: center;
+}
+
+.filtro{
+	width: 200px;
+}
+
+
+
+/* Setor A*/
+
+.setores{
+	margin-top: 30px;
+	padding-left: 20px;
+}
+
+.ocorrenciasSetores {
+	list-style: none;
+    padding: 0;
+    margin: 0; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cano {
+	border: 1px solid green;
+	border-radius: 5px;
+	height: 70px;
+	width: 170px;
+	margin: 5px;
+}
+
+.piso {
+	border: 1px solid orange;
+	border-radius: 5px;
+	height: 70px;
+	width: 170px;
+	margin: 5px;
+}
+
+
+
 
 
 /* max device width */
 @media screen and (max-device-width: 480px) {
-}
-.button1 {
-    background-color: #ffffff;
-    color: orange !important;
-}
+
+	.button2 {
+    	background-color: #ffffff;
+    	color: orange !important;
+	}
     .card_options {
 		width: 70%;
 	}
-
+	.ocorrenciasSetores {
+		grid-template-columns: 1fr 1fr;
+	}
+}
 
 /* min-width & max-width */
-@media screen and (min-width: 600px) and (max-width: 900px) {
-	.button1 {
+@media screen and (min-width: 480px) and (max-width: 900px) {
+	.button2 {
 		background-color: #ffffff;
 	    color: orange !important;
 	}
 	.card_options {
 		width: 50%;
 	}
+	.ocorrenciasSetores {
+		grid-template-columns: 1fr 1fr;
+	}
 }
 
 
 @media screen and (min-width: 900px) {
-	.button1 {
+	.button2 {
 		background-color: #ffffff;
 	    color: orange !important;
 	}
 	.card_options {
 		width: 30%;
         margin-top: 600px;
+	}
+	.ocorrenciasSetores, .setorTitulo {
+		grid-template-columns: 1fr 1fr;
+		width: 1000px;
+		margin-left: 510px;
 	}
     
 }
