@@ -151,7 +151,6 @@ select {
 	flex-direction: column;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	margin: 0px;
 	width: 80%;
 	height: 9em;
 	padding: 1.0em;
@@ -159,7 +158,8 @@ select {
 	background-color: aliceblue;
 	box-shadow: 0px 0px 14px rgba(214, 148, 25, 0.25);
 	z-index: 20000;
-	margin-top: 45em;
+	margin-top: 35em;
+
 }
 
 #footer {
@@ -204,7 +204,7 @@ select {
 	border-radius: 5px;
 	height: 70px;
 	width: 170px;
-	margin: 5px;
+	margin: 4px;
 }
 
 .piso {
@@ -212,7 +212,7 @@ select {
 	border-radius: 5px;
 	height: 70px;
 	width: 170px;
-	margin: 5px;
+	margin: 4px;
 }
 
 
@@ -220,7 +220,7 @@ select {
 
 
 /* max device width */
-@media screen and (max-device-width: 480px) {
+@media screen and (min-device-width: 350px) and (max-width: 480px) {
 
 	.button2 {
     	background-color: #ffffff;
@@ -235,7 +235,7 @@ select {
 }
 
 /* min-width & max-width */
-@media screen and (min-width: 480px) and (max-width: 900px) {
+@media screen and (min-width: 481px) and (max-width: 900px) {
 	.button2 {
 		background-color: #ffffff;
 	    color: orange !important;
@@ -249,7 +249,7 @@ select {
 }
 
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 901px) {
 	.button2 {
 		background-color: #ffffff;
 	    color: orange !important;
