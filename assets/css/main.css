@@ -187,13 +187,13 @@ select {
 
 .setores{
 	margin-top: 30px;
-	padding-left: 10px;
+	margin-left: 5px;
 }
 
 .ocorrenciasSetores {
 	list-style: none;
     padding: 0;
-    margin: 0; 
+    margin-right: 0em; 
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
