@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <link rel="manifest" href="manifest.json">
+
+    <!--Font roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+
+    <!--main css-->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!--Normalize CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Formulário de Relato</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div>
+            <nav>
+                <ul class="icons">
+                    <div class="flex">
+                        <ul>
+                            <li><a href="index.html"><img src="./assets/image/icon_mapa.png"
+                                        alt="Icone de Localização"></a>
+                            </li>
+                            <li><a href="ocorrencias.html"><img src="./assets/image/icon_lista.png"
+                                        alt="Icone de lista"></a></li>
+                        </ul>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div>
+        <h2 class="title_1">Registro do risco</h2>
+        <form action="https://formsubmit.co/lucass.calado2@gmail.com" method="POST" enctype="multipart/form-data" class="report-form" data-form>
+            <label for="image-upload">Upload de Imagem:</label>
+            <input type="file" id="image-upload" name="image" accept="image/*" required>
+
+            <label for="setor">Setor:</label>
+            <textarea id="setor" name="setor" rows="1" required></textarea>
+
+            <label for="image-description">Descrição da Imagem:</label>
+            <textarea id="image-description" name="description" rows="2" required></textarea>
+
+            <label for="risk-type">Tipo de Risco:</label>
+            <select id="risk-type" name="risk" required>
+                <option value="" disabled selected>Selecione o tipo de risco</option>
+                <option value="Risco 1">Risco 1</option>
+                <option value="Risco 2">Risco 2</option>
+                <option value="Risco 3">Risco 3</option>
+                <option value="Risco 4">Risco 4</option>
+            </select>
+
+            <button class="button_form" type="submit" data-button>Relatar</button>
+        </form>
+    </div>
+
+    <script src="./assets/js/form.js"></script>
+
+
+
+
+
+
+
+
+    <script src="service-worker.js"></script>
+    <script>
+        let newWorker;
+        document.getElementById('reload').addEventListener('click', function () {
+            newWorker.postMessage({ action: 'skipWaiting' });
+        });
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./service-worker.js').then(reg => {
+                reg.addEventListener('updatefound', () => {
+                    newWorker = reg.installing;
+                });
+            });
+        }
+        let refreshing;
+        navigator.serviceWorker.addEventListener('controllerchange', function () {
+            if (refreshing) return;
+            window.location.reload();
+            refreshing = true;
+        })
+    </script>
+</body>
+
+</html>
