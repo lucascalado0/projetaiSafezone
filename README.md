@@ -11,10 +11,6 @@ Funcionalidades
 
 -Mapeamento de Riscos: Visualização de pontos de risco em um mapa interativo.
 
--Relatórios: Geração de relatórios de incidentes e pontos de risco.
-
--Comunicação Ágil: Canal centralizado para comunicação entre colaboradores e gestores.
-
 -Mitigação de Riscos: Ferramentas para acompanhamento e resolução de problemas reportados.
 
 
