@@ -17,6 +17,9 @@ Funcionalidades
 Tecnologias Utilizadas
 
 HTML: Estruturação do conteúdo da aplicação.
+
 CSS: Estilização e design responsivo da interface.
+
 JavaScript: Funcionalidades e lógica de interação do usuário.
+
 PWA (Progressive Web App): Transformação da aplicação em um aplicativo progressivo, permitindo acesso offline, notificações push e uma experiência similar a um aplicativo nativo.
