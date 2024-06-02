@@ -8,9 +8,13 @@ O projeto SafeZone tem como objetivo desenvolver um sistema integrado e eficient
 Funcionalidades 
 
 -Identificação de Riscos: Ferramentas para os colaboradores identificarem e reportarem pontos de risco no ambiente de trabalho.
+
 -Mapeamento de Riscos: Visualização de pontos de risco em um mapa interativo.
+
 -Relatórios: Geração de relatórios de incidentes e pontos de risco.
+
 -Comunicação Ágil: Canal centralizado para comunicação entre colaboradores e gestores.
+
 -Mitigação de Riscos: Ferramentas para acompanhamento e resolução de problemas reportados.
 
 
